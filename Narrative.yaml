@@ -1,0 +1,356 @@
+# NARRATIVE AND STRATEGIC STORYTELLING TYPE LIBRARY (v4.0)
+# ========================================================
+# INTEGRATED CONFIGURATION: NARRATIVE ENGINEERING & TYPE SYSTEM
+#
+# PURPOSE:
+#   A programmable type system + workflow for narrative engineering.
+#   Combines static narrative archetypes with executable integrity constraints.
+#   Enforces "Facts-Before-Form": Build a ClaimGraph before applying a Template.
+#
+# CLASS HIERARCHY OVERVIEW:
+# 1. BaseType: AbstractNarrativeEntity (Common Metadata)
+# 2. Extension: NarrativeArchetype (Static shapes/themes)
+# 3. Extension: TemporalStructure (Ordered sequences/blueprints)
+# 4. Extension: StrategicPattern (Functional/Business applications)
+# 5. Extension: AnalyticalFramework (Deconstruction/Intelligence tools)
+# 6. Extension: IntegrityConstraint (Ethical/Epistemic guardrails) [NEW]
+# 7. Extension: DomainModule (Context-specific defaults) [NEW]
+# 8. Extension: PipelineStage (Operational workflow) [NEW]
+
+metadata:
+  version: "4.0.0"
+  status: "Draft / Agent Config"
+  design_pattern: "Polymorphic Data Structure + Agent Workflow"
+  last_updated: "2025-06-15"
+  core_doctrine:
+    - "No material claim without provenance."
+    - "Separate known facts from interpretation."
+    - "High-stakes domains require corroboration."
+    - "Analysis-only for manipulation topics (No covert persuasion)."
+
+# ==============================================================================
+# SECTION 1: ARCHETYPES (THE "WHAT")
+# ==============================================================================
+
+archetypes:
+  
+  # SUBTYPE: EmotionalArc (Vonnegut)
+  emotional_arcs:
+    - uid: "arc_rags_to_riches"
+      name: "Rags to Riches"
+      trajectory: "Steady Rise /"
+      dynamics: "Continuous upward trend. Protagonist works for success."
+    - uid: "arc_riches_to_rags"
+      name: "Riches to Rags"
+      trajectory: "Steady Fall \\"
+      dynamics: "Continuous downward spiral. Tragedy/Cautionary tale."
+    - uid: "arc_man_in_hole"
+      name: "Man in a Hole"
+      trajectory: "Fall then Rise \\/"
+      dynamics: "Character encounters trouble, then resolves it. High commercial viability."
+    - uid: "arc_icarus"
+      name: "Icarus"
+      trajectory: "Rise then Fall /\\"
+      dynamics: "Great fortune leads to tragic end driven by hubris."
+    - uid: "arc_cinderella"
+      name: "Cinderella"
+      trajectory: "Rise, Fall, Rise /\\/"
+      dynamics: "Success, sudden reversal (midnight), final return to grace."
+    - uid: "arc_oedipus"
+      name: "Oedipus"
+      trajectory: "Fall, Rise, Fall \\/\\"
+      dynamics: "Bad fortune, false hope, final destruction."
+
+  # SUBTYPE: ThematicPlot (Booker & Tobias)
+  thematic_plots:
+    - uid: "plot_overcoming_monster"
+      name: "Overcoming the Monster"
+      focus: "External Antagonism"
+      core_mechanic: "David vs. Goliath dynamic."
+    - uid: "plot_quest"
+      name: "The Quest"
+      focus: "Tangible Goal"
+      core_mechanic: "Journey to acquire object/person/location."
+    - uid: "plot_voyage_return"
+      name: "Voyage and Return"
+      focus: "Internal Transformation"
+      core_mechanic: "Travel to 'Special World', return with wisdom."
+    - uid: "plot_rebirth"
+      name: "Rebirth"
+      focus: "Redemption"
+      core_mechanic: "Protagonist redeemed from dark spell/state."
+    - uid: "plot_tragedy"
+      name: "Tragedy"
+      focus: "Fatal Flaw"
+      core_mechanic: "Protagonist's nature leads to destruction."
+    - uid: "plot_comedy"
+      name: "Comedy"
+      focus: "Resolution"
+      core_mechanic: "Confusion resolves into harmony."
+    
+    # Tobias's 20 Master Plots (Grouped)
+    - uid: "plot_tobias_action"
+      name: "Tobias: Action & Adventure"
+      variants: ["Quest", "Adventure", "Pursuit", "Rescue", "Escape"]
+    - uid: "plot_tobias_moral"
+      name: "Tobias: Moral & Intellectual"
+      variants: ["Revenge", "The Riddle", "Rivalry", "Underdog", "Temptation"]
+    - uid: "plot_tobias_emotional"
+      name: "Tobias: Character & Emotional"
+      variants: ["Metamorphosis", "Transformation", "Maturation", "Love", "Forbidden Love", "Sacrifice", "Discovery", "Wretched Excess"]
+
+  # SUBTYPE: ConflictTaxonomy (Polti)
+  conflict_taxonomy:
+    uid: "polti_36"
+    name: "The 36 Dramatic Situations"
+    usage: "Granular conflict identification."
+    sample_situations:
+      - "Supplication"
+      - "Deliverance"
+      - "Crime Pursued by Vengeance"
+      - "The Enigma"
+      - "Fatal Imprudence"
+      - "Involuntary Crimes of Love"
+      - "Self-Sacrificing for an Ideal"
+
+  # SUBTYPE: FolkloreIndex (Aarne-Thompson-Uther)
+  folklore_index:
+    uid: "atu_index"
+    name: "Aarne-Thompson-Uther Index"
+    description: "Classification system for folktales."
+    categories:
+      - id: "ATU_1-299"
+        name: "Animal Tales"
+      - id: "ATU_300-749"
+        name: "Tales of Magic"
+      - id: "ATU_750-849"
+        name: "Religious Tales"
+      - id: "ATU_850-999"
+        name: "Realistic Tales"
+      - id: "ATU_1000-1199"
+        name: "Tales of the Stupid Ogre"
+
+# ==============================================================================
+# SECTION 2: STRUCTURES & TEMPLATES (THE "HOW")
+# ==============================================================================
+
+templates:
+  
+  # SUBTYPE: StandardTemplates
+  catalogue:
+    - uid: "struct_three_act"
+      name: "Three-Act Structure"
+      domains: ["journalism", "business", "geopolitics"]
+      pacing_type: "Cinematic Standard"
+      beat_schema: 
+        - "Act 1: Setup, stakes, controlling question"
+        - "Act 2: Complication, midpoint turn, escalation"
+        - "Act 3: Resolution, implications, closing image"
+
+    - uid: "struct_monomyth"
+      name: "The Hero's Journey (Monomyth)"
+      domains: ["creative", "brand_story"]
+      pacing_type: "Epic / Mythic"
+      steps: 12
+      flow: ["Ordinary World", "Call to Adventure", "Refusal", "Mentor", "Threshold", "Tests/Allies", "Approach", "Ordeal", "Reward", "Road Back", "Resurrection", "Return"]
+
+    - uid: "struct_kishotenketsu"
+      name: "Four-Part Turn (Kishōtenketsu)"
+      domains: ["journalism", "business"]
+      pacing_type: "Explanatory / Twist"
+      beat_schema: ["Introduction", "Development", "Twist (Recontextualization)", "Reconciliation"]
+
+    - uid: "struct_snowflake"
+      name: "Progressive Elaboration (Snowflake)"
+      domains: ["journalism", "business", "geopolitics"]
+      pacing_type: "Iterative"
+      beat_schema: ["1 Sentence", "1 Paragraph", "Page Outline", "Beats", "Draft"]
+
+    - uid: "struct_star"
+      name: "STAR Interview"
+      domains: ["business"]
+      pacing_type: "Case Study"
+      beat_schema: ["Situation (20%)", "Task (10%)", "Action (60%)", "Result (10%)"]
+
+    - uid: "struct_strategy_kernel"
+      name: "Strategy Kernel"
+      domains: ["business", "geopolitics"]
+      pacing_type: "Strategic"
+      beat_schema: ["Diagnosis", "Guiding Policy", "Coherent Actions"]
+
+    - uid: "struct_case_before_after"
+      name: "Before/After Case Study"
+      domains: ["business"]
+      beat_schema: ["Before (Baseline)", "Intervention (Mechanism)", "After (Outcomes)", "Transferability"]
+
+    - uid: "struct_fichtean"
+      name: "The Fichtean Curve"
+      pacing_type: "Thriller / Mystery"
+      flow: ["Inciting Incident (Immediate)", "Crisis 1", "Crisis 2", "Climax", "Falling Action"]
+
+    - uid: "struct_story_spine"
+      name: "Pixar's Story Spine"
+      pacing_type: "Causal Chain"
+      flow: ["Once upon a time", "Every day", "Until one day", "Because of that", "Because of that", "Until finally", "Ever since then"]
+
+    - uid: "struct_mountain"
+      name: "The Mountain"
+      description: "Mapping tension without guaranteed happy ending (TV Series arc)."
+      flow: "Setting -> Small Challenges -> Rising Action -> Climactic Conclusion"
+
+    - uid: "struct_nested_loops"
+      name: "Nested Loops"
+      description: "Stories within stories; core message at center."
+      flow: "Start A -> Start B -> Center -> End B -> End A"
+    
+    - uid: "struct_in_medias_res"
+      name: "In Medias Res"
+      description: "Starting in the heat of action."
+      flow: "Mid-Action -> Rising Action -> Explanation (Backstory) -> Climax -> Resolution"
+
+# ==============================================================================
+# SECTION 3: DOMAIN MODULES (CONTEXT & DEFAULTS)
+# ==============================================================================
+
+domain_modules:
+  
+  journalism:
+    description: "Professional reporting. Explicit separation of fact and interpretation."
+    default_constraints:
+      - "no_ungrounded_assertions"
+      - "news_opinion_separation"
+      - "fairness_to_subjects"
+      - "precise_sourcing"
+      - "corrections_process_present"
+    preferred_templates: ["struct_three_act", "struct_snowflake", "struct_kishotenketsu"]
+
+  business:
+    description: "Decision-useful, outcome-aware. Quantified claims required."
+    default_constraints:
+      - "no_ungrounded_assertions"
+      - "quantify_results_when_claimed"
+      - "conflicts_and_incentives_disclosed"
+    preferred_templates: ["struct_case_before_after", "struct_star", "struct_strategy_kernel"]
+
+  geopolitics:
+    description: "High-stakes analysis. Epistemic friction and uncertainty labelling required."
+    default_constraints:
+      - "no_ungrounded_assertions_strict"
+      - "multi_source_requirement"
+      - "uncertainty_labelling_required"
+      - "high_stakes_harm_check"
+    preferred_templates: ["struct_three_act", "struct_strategy_kernel", "struct_snowflake"]
+    enrichments:
+      actor_types: ["state", "non_state", "institution", "proxy"]
+      instruments: ["sanctions", "logistics", "trade", "diplomacy"]
+
+# ==============================================================================
+# SECTION 4: INTEGRITY & ETHICS (THE GUARDRAILS)
+# ==============================================================================
+
+integrity_constraints:
+  
+  # --- Evidence & Provenance ---
+  no_ungrounded_assertions:
+    intent: "Every material claim must have evidence."
+    rule: "min_evidence_count: 1, min_source_reliability: 0.55"
+    remediation: "Add evidence or downgrade claim to hypothesis."
+
+  no_ungrounded_assertions_strict:
+    intent: "High-stakes variant. Corroboration required."
+    rule: "min_evidence_count: 2, min_distinct_sources: 2"
+    remediation: "Require 2nd source or label as 'Contested'."
+
+  precise_sourcing:
+    intent: "Complete provenance chain: Claim -> Evidence -> Source."
+    rule: "All pivotal claims must link to valid evidence IDs."
+
+  # --- Epistemic Transparency ---
+  uncertainty_labelling_required:
+    intent: "Explicitly mark what is unknown."
+    trigger: "claim.status == 'contested' OR source.reliability < 0.60"
+    output_requirement: "Add uncertainty statement."
+
+  news_opinion_separation:
+    intent: "Distinct sections for fact vs. inference."
+    rule: "Sections: 'What we know', 'What we don't know', 'Interpretation'."
+
+  # --- Fairness & Harm ---
+  fairness_to_subjects:
+    intent: "Include subject perspective on material criticism."
+    rule: "Right-of-reply note required for pivotal criticism."
+
+  high_stakes_harm_check:
+    intent: "Pre-publication review for power dynamics."
+    checklist: ["Preserve agency", "Avoid harmful stereotypes", "Assess risk to individuals"]
+
+  # --- Business Specific ---
+  quantify_results_when_claimed:
+    intent: "Claims of 'increase/decrease' must have metrics."
+    trigger_words: ["increased", "improved", "saved", "grew"]
+    rule: "Must provide metric + baseline."
+
+  conflicts_and_incentives_disclosed:
+    intent: "Disclose conflicts that matter."
+    rule: "Metadata must include conflicts_summary."
+
+# ==============================================================================
+# SECTION 5: ANALYTICAL FRAMEWORKS (THE LENS)
+# ==============================================================================
+
+analytical_frameworks:
+
+  - uid: "intel_n4ate"
+    name: "N4ATE Framework"
+    domain: "Geopolitics"
+    elements: ["Narrative", "Actor", "Aim", "Audience", "Amplifier", "Tactic", "Effect"]
+
+  - uid: "intel_inception"
+    name: "Narrative Engineering (Inception)"
+    domain: "Psychological Warfare"
+    mechanisms:
+      Seeding: "Planting organic seeds."
+      Participatory_Propaganda: "Targets become unwitting amplifiers."
+      Cognitive_Pathways: ["Transportation", "Identification", "Repetition"]
+
+  - uid: "intel_disarm"
+    name: "DISARM Framework"
+    domain: "InfoSec"
+    purpose: "Taxonomy of TTPs (Tactics, Techniques, Procedures)."
+
+  - uid: "comp_zeroshot"
+    name: "Zero-Shot Narrative Framing"
+    domain: "Computational (LLM)"
+    detected_frames: ["Conflict/Security", "Legal/Human-Rights", "Economic Consequence", "Morality"]
+
+# ==============================================================================
+# SECTION 6: PIPELINE & WORKFLOW (THE PROCESS)
+# ==============================================================================
+
+pipelines:
+  stages:
+    1_build_claim_graph:
+      intent: "Convert raw notes into provenance-complete graph."
+      steps: ["Extract Entities/Claims", "Attach Evidence", "Set Materiality"]
+    
+    2_validate_integrity:
+      intent: "Evaluate constraints."
+      gate: "Block on Severity: Critical/High."
+    
+    3_select_template:
+      intent: "Choose narrative shape based on Domain + Seed."
+      output: "Beat Plan"
+    
+    4_compile_story:
+      intent: "Generate draft from Beats (not vibes)."
+      steps: ["Draft Beats", "Populate Sections", "Generate Footnotes"]
+    
+    5_review_and_package:
+      intent: "Audit and assemble."
+      outputs: ["Story", "Review Log", "Corrections Ledger"]
+
+metrics:
+  targets:
+    epistemic_transparency: 0.85 # Share of pivotal claims verified/labelled
+    traceability: 0.95 # Share of claims with complete provenance
+    decision_usefulness: 0.90 # Includes implications/options
